@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import gambarProfile from "@/./public/raihndf.jpeg";
 import { GraduationCap, MapPin, Sparkles, Heart } from "lucide-react";
 
 export default function AboutSection() {
@@ -41,17 +40,17 @@ export default function AboutSection() {
     <div className="bg-gray-50 min-h-screen">
       {/* 💡 Hero Section - Personal Info */}
       <section className="bg-gradient-to-br from-indigo-500 to-indigo-700 py-16 text-white ">
-        <div className="flex flex-row justify-center gap-40">
-          <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
+        <div className="flex flex-row justify-center gap-10 md:gap-40 items-center">
+          <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
             <Image
-              src={gambarProfile}
+              src="/raihndf.jpeg" // Path dari folder `public/`
               alt="Profile of Desta Novita Dewi"
-              width={120}
-              height={120}
+              width={144} // Sesuaikan dengan ukuran yang lebih baik
+              height={144}
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="text-center md:text-left">
             <h1 className="text-3xl font-bold mb-2">Tentang Saya</h1>
             <p className="text-lg max-w-md">
               Mahasiswa Sistem Informasi dengan ketertarikan pada pengembangan
@@ -85,28 +84,6 @@ export default function AboutSection() {
           ))}
         </div>
       </section>
-
-      <style jsx>{`
-        @media (max-width: 360px) {
-          .w-36 {
-            width: 100px;
-            height: 100px;
-          }
-          h1 {
-            font-size: 1.5rem;
-          }
-          p {
-            font-size: 0.9rem;
-          }
-          div[class*="flex items-start"] {
-            flex-direction: column;
-            text-align: center;
-          }
-          div[class*="bg-white"] {
-            margin-bottom: 12px;
-          }
-        }
-      `}</style>
     </div>
   );
 }
