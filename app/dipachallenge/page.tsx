@@ -20,14 +20,14 @@ export default function MyProjects() {
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
   return (
-    <section ref={containerRef} className="py-20 bg-gray-100">
+    <section ref={containerRef} className="py-20 bg-sky-100">
       <h2 className="text-3xl font-bold text-center mb-10">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-5xl mx-auto">
         {projects.map((project) => (
           <motion.div
             key={project.id}
             style={{ scale }}
-            className="overflow-hidden rounded-lg shadow-lg bg-white"
+            className="overflow-hidden rounded-lg shadow-lg bg-black"
           >
             <Image
               src={project.image}
